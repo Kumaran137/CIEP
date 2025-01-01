@@ -43,3 +43,5 @@ video_experiences/
 # Miscellaneous
 .idea/          # JetBrains IDE (e.g., WebStorm) project files
 .vscode/        # VSCode project settings
+seed.js
+populate.js
