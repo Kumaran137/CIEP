@@ -1,0 +1,70 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Overall container for 80% and 20% layout */
+.placement-dashboard {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Companies section (80% width) */
+.companies-section {
+  width: 80%; /* Occupies 80% of the container */
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns for companies */
+  gap: 20px; /* Space between items */
+  background-color: #f9f9f9;
+}
+
+/* Each company occupies one column */
+.company-item {
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  height: 100px; /* Set a fixed height to maintain uniformity */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.company-item:hover {
+  background-color: #d0d0d0;
+  transform: scale(1.05);
+}
+
+/* Students section (20% width) */
+.students-section {
+  width: 20%; /* Occupies 20% of the container */
+  padding: 20px;
+  background-color: #ffffff; /* Different background for contrast */
+  border-left: 1px solid #ccc; /* Divider line */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #333; /* Border around the students list */
+  border-radius: 5px;
+}
+
+/* Style for student widgets */
+.student-widget {
+  padding: 10px;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.student-widget:hover {
+  background-color: #d0d0d0;
+}

@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL") // Set this to your PostgreSQL connection string
+}
+
+model Company {
+  id      Int       @id @default(autoincrement())
+  name    String    @unique
+  stats   Stat[]
+  years   YearStats[]
+
+  Placement Placement[]
+}
+
+model Stat {
+  id             Int      @id @default(autoincrement())
+  department     String
+  studentsPlaced Int
+  companyId      Int
+  company        Company  @relation(fields: [companyId], references: [id])
+}
+
+model YearStats {
+  id             Int      @id @default(autoincrement())
+  year           Int
+  hired          Int
+  amountPaid     Int
+  companyId      Int
+  company        Company  @relation(fields: [companyId], references: [id])
+}
+
+model Placement {
+  id             Int       @id @default(autoincrement())
+  year           Int
+  department     String
+  totalAttended  Int
+  totalConverted Int
+  students       Student[]
+  companyId      Int
+  company        Company   @relation(fields: [companyId], references: [id])
+}
+
+model Student {
+  id          Int       @id @default(autoincrement())
+  name        String
+  converted   Boolean
+  placed      Boolean?
+  placementId Int
+  placement   Placement @relation(fields: [placementId], references: [id])
+}

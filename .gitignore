@@ -1,0 +1,45 @@
+# Node.js dependencies
+node_modules/
+
+# Environment files
+.env
+
+# Build output
+dist/
+public/build/
+
+# Logs
+*.log
+
+# Cache
+.cache/
+*.cache
+
+# Temporary files
+*.tmp
+*.temp
+
+# Vite-specific
+.vite/
+
+# Prisma
+prisma/.cache/
+
+# Package manager lock files (if you use one and want to exclude others)
+# Uncomment if you want to ignore specific lock files
+# yarn.lock
+# pnpm-lock.yaml
+
+# System files
+.DS_Store
+Thumbs.db
+
+# PDF files (if verizon.pdf is not required in your repo)
+verizon.pdf
+
+# Video files (if video_experiences contains videos not needed in your repo)
+video_experiences/
+
+# Miscellaneous
+.idea/          # JetBrains IDE (e.g., WebStorm) project files
+.vscode/        # VSCode project settings
