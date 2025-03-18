@@ -196,9 +196,7 @@ const App = () => {
           </Link>
         </div>
 
-        {/* Main App Content */}
         <div style={{ flexGrow: 1 }}>
-          {/* Top Bar */}
           <div style={{ 
             backgroundColor: "#4A90E2", 
             color: "#fff", 
